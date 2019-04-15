@@ -6,9 +6,9 @@ const app = express();
 app.use(fileUpload());
 
 // Upload Endpoint
-app.post("/uplaod", (req, res) => {
+app.post("/upload", (req, res) => {
   if (req.files === null) {
-    return res.status(400).json({ msg: "No file was uploaded" });
+    return res.status(400).json({ msg: "No file uploaded" });
   }
 
   const file = req.files.file;
